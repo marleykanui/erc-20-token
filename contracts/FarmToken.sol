@@ -41,7 +41,7 @@ contract FarmToken is ERC20 {
         _mint(msg.sender, _amount);
     }
 
-    function withDraw(uint256 _amount) public {
+    function withdraw(uint256 _amount) public {
         // Burn FarmTokens from msg sender 
         _burn(msg.sender, _amount);
 

@@ -26,7 +26,7 @@ module.exports = async function (callback) {
     farmToken.address
   );
   console.log(
-    `Balance FarmToken Before accounts[0]: ${web.utils.fromWei(
+    `Balance FarmToken Before accounts[0]: ${web3.utils.fromWei(
       balanceFarmTokenBeforeAccounts0.toString()
     )}`
   );

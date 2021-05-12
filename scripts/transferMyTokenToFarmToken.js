@@ -32,6 +32,7 @@ module.exports = async function (callback) {
   //   Verify accounts[0] and farmToken balance of MyToken before and after the transfer
   balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0]);
   balanceMyTokensBeforeFarmToken = await myToken.balanceOf(farmToken.address);
+  console.log('*** My Token ***');
   console.log(
     `Balance MyToken Before accounts[0]: ${web3.utils.fromWei(
       balanceMyTokenBeforeAccounts0.toString()
@@ -60,7 +61,7 @@ module.exports = async function (callback) {
   );
 
   //   Call deposit function from FarmToken
-  console.log('Call Deposit Function');
+  console.log('*** Call Deposit Function ***');
   await farmToken.deposit(web3.utils.toWei('100', 'ether'));
   console.log('*** My Token ***');
   balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0]);
